@@ -1,11 +1,11 @@
-About defcon
-============
+About defcon-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/defcon-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/robotools/defcon
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/defcon-feedstock/blob/main/LICENSE.txt)
 
 Summary: A set of flexible objects for representing UFO data.
 
