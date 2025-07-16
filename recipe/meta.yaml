@@ -1,13 +1,13 @@
 {% set name = "defcon" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/defcon-{{ version }}.zip
-  sha256: aca8674a8f71723af6a08f332f3ed3156ba0fe00591eb5aff7572caad1472d09
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 25dfe7fd0152ccf292cb190d1928a47d588899c20b046854293e039e1c93e5e0
 
 build:
   noarch: python
