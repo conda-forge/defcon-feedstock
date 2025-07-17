@@ -21,7 +21,7 @@ requirements:
     - setuptools-scm
     - setuptools
   run:
-    - fonttools >=4.10.0
+    - fonttools >=4.59.0
     - python >={{ python_min }}
     - fs
 
