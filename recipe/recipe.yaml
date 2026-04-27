@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: defcon
+  version: "0.12.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 25dfe7fd0152ccf292cb190d1928a47d588899c20b046854293e039e1c93e5e0
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools-scm
+    - setuptools
+  run:
+    - fonttools >=4.59.0
+    - python >=${{ python_min }}
+    - fs
+
+tests:
+  - python:
+      imports:
+        - defcon
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: A set of flexible objects for representing UFO data.
+  license: MIT
+  license_file:
+    - License.txt
+  homepage: https://github.com/robotools/defcon
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
